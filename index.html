@@ -119,15 +119,15 @@
     </section>
     <noscript><p class="noscript-message">Bật JavaScript để ngắm hoa nở và mở thiệp 20/10 nhé.</p></noscript>
   </main>
-  <!-- Nhạc nền cho Vườn hoa -->
-<audio id="bgMusicGarden" loop preload="auto">
+  <!-- Nhạc nền -->
+<audio id="bgMusic" loop preload="auto">
   <source src="./assets/music.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-  // Tự động phát nhạc khi chạm/click vào màn hình lần đầu
+  // Tự động phát nhạc khi chạm/click vào trang web lần đầu tiên
   document.addEventListener('click', function() {
-    const audio = document.getElementById('bgMusicGarden');
+    const audio = document.getElementById('bgMusic');
     if (audio.paused) {
       audio.play().catch(e => console.log(e));
     }
