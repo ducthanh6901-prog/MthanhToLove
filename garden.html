@@ -537,5 +537,19 @@
       resize();
     })();
   </script>
+  <!-- Nhạc nền cho Vườn hoa -->
+<audio id="bgMusicGarden" loop preload="auto">
+  <source src="./assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Tự động phát nhạc khi chạm/click vào màn hình lần đầu
+  document.addEventListener('click', function() {
+    const audio = document.getElementById('bgMusicGarden');
+    if (audio.paused) {
+      audio.play().catch(e => console.log(e));
+    }
+  }, { once: true });
+</script>
 </body>
 </html>
